@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaContabilidad_LibriDiario_LibroMayor", "SistemaContabilidad_LibriDiario_LibroMayor\SistemaContabilidad_LibriDiario_LibroMayor.csproj", "{DE74EBD2-D738-450D-B470-ABB41733372A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE74EBD2-D738-450D-B470-ABB41733372A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE74EBD2-D738-450D-B470-ABB41733372A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE74EBD2-D738-450D-B470-ABB41733372A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE74EBD2-D738-450D-B470-ABB41733372A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7727F1F1-4919-4829-815D-42D474EA3632}
+	EndGlobalSection
+EndGlobal

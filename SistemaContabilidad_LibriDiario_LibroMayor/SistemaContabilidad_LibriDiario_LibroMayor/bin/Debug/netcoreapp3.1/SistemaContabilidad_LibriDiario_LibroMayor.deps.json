@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "SistemaContabilidad_LibriDiario_LibroMayor/1.0.0": {
+        "runtime": {
+          "SistemaContabilidad_LibriDiario_LibroMayor.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SistemaContabilidad_LibriDiario_LibroMayor/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
