@@ -43,11 +43,14 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
             this.textBox2FECHA = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonELIMINAR = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.buttonREGISTRAR = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonSALIR
             // 
-            this.buttonSALIR.Location = new System.Drawing.Point(468, 401);
+            this.buttonSALIR.Location = new System.Drawing.Point(468, 415);
             this.buttonSALIR.Name = "buttonSALIR";
             this.buttonSALIR.Size = new System.Drawing.Size(131, 23);
             this.buttonSALIR.TabIndex = 1;
@@ -56,7 +59,7 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
             // 
             // buttonLIBROMAYOR
             // 
-            this.buttonLIBROMAYOR.Location = new System.Drawing.Point(468, 357);
+            this.buttonLIBROMAYOR.Location = new System.Drawing.Point(321, 415);
             this.buttonLIBROMAYOR.Name = "buttonLIBROMAYOR";
             this.buttonLIBROMAYOR.Size = new System.Drawing.Size(131, 23);
             this.buttonLIBROMAYOR.TabIndex = 2;
@@ -66,7 +69,7 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
             // comboBoxCUENTA
             // 
             this.comboBoxCUENTA.FormattingEnabled = true;
-            this.comboBoxCUENTA.Location = new System.Drawing.Point(478, 105);
+            this.comboBoxCUENTA.Location = new System.Drawing.Point(489, 105);
             this.comboBoxCUENTA.Name = "comboBoxCUENTA";
             this.comboBoxCUENTA.Size = new System.Drawing.Size(121, 23);
             this.comboBoxCUENTA.TabIndex = 25;
@@ -76,9 +79,9 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(384, 108);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 15);
+            this.label6.Size = new System.Drawing.Size(86, 15);
             this.label6.TabIndex = 24;
-            this.label6.Text = "CUENTA";
+            this.label6.Text = "CUENTA(DEBE)";
             // 
             // label5
             // 
@@ -91,7 +94,7 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
             // 
             // textBoxDESCRIPCION
             // 
-            this.textBoxDESCRIPCION.Location = new System.Drawing.Point(478, 251);
+            this.textBoxDESCRIPCION.Location = new System.Drawing.Point(489, 236);
             this.textBoxDESCRIPCION.Name = "textBoxDESCRIPCION";
             this.textBoxDESCRIPCION.Size = new System.Drawing.Size(121, 23);
             this.textBoxDESCRIPCION.TabIndex = 22;
@@ -99,7 +102,7 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(384, 259);
+            this.label4.Location = new System.Drawing.Point(384, 244);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 15);
             this.label4.TabIndex = 21;
@@ -107,7 +110,7 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
             // 
             // textBoxSALDO
             // 
-            this.textBoxSALDO.Location = new System.Drawing.Point(478, 195);
+            this.textBoxSALDO.Location = new System.Drawing.Point(489, 195);
             this.textBoxSALDO.Name = "textBoxSALDO";
             this.textBoxSALDO.Size = new System.Drawing.Size(121, 23);
             this.textBoxSALDO.TabIndex = 20;
@@ -115,7 +118,7 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
             // comboBoxTIPO
             // 
             this.comboBoxTIPO.FormattingEnabled = true;
-            this.comboBoxTIPO.Location = new System.Drawing.Point(478, 60);
+            this.comboBoxTIPO.Location = new System.Drawing.Point(489, 61);
             this.comboBoxTIPO.Name = "comboBoxTIPO";
             this.comboBoxTIPO.Size = new System.Drawing.Size(121, 23);
             this.comboBoxTIPO.TabIndex = 19;
@@ -140,7 +143,7 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
             // 
             // textBox2FECHA
             // 
-            this.textBox2FECHA.Location = new System.Drawing.Point(478, 149);
+            this.textBox2FECHA.Location = new System.Drawing.Point(489, 149);
             this.textBox2FECHA.Name = "textBox2FECHA";
             this.textBox2FECHA.Size = new System.Drawing.Size(121, 23);
             this.textBox2FECHA.TabIndex = 16;
@@ -156,18 +159,47 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
             // 
             // buttonELIMINAR
             // 
-            this.buttonELIMINAR.Location = new System.Drawing.Point(468, 302);
+            this.buttonELIMINAR.Location = new System.Drawing.Point(321, 376);
             this.buttonELIMINAR.Name = "buttonELIMINAR";
             this.buttonELIMINAR.Size = new System.Drawing.Size(131, 23);
             this.buttonELIMINAR.TabIndex = 26;
             this.buttonELIMINAR.Text = "ELIMINAR REGISTRO";
             this.buttonELIMINAR.UseVisualStyleBackColor = true;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(489, 284);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 23);
+            this.comboBox1.TabIndex = 28;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(384, 290);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(99, 15);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "CUENTA (HABER)";
+            // 
+            // buttonREGISTRAR
+            // 
+            this.buttonREGISTRAR.Location = new System.Drawing.Point(468, 376);
+            this.buttonREGISTRAR.Name = "buttonREGISTRAR";
+            this.buttonREGISTRAR.Size = new System.Drawing.Size(131, 23);
+            this.buttonREGISTRAR.TabIndex = 29;
+            this.buttonREGISTRAR.Text = "REGISTRAR";
+            this.buttonREGISTRAR.UseVisualStyleBackColor = true;
+            // 
             // LibroDiariocs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(633, 450);
+            this.ClientSize = new System.Drawing.Size(735, 450);
+            this.Controls.Add(this.buttonREGISTRAR);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.buttonELIMINAR);
             this.Controls.Add(this.comboBoxCUENTA);
             this.Controls.Add(this.label6);
@@ -204,5 +236,8 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
         private System.Windows.Forms.TextBox textBox2FECHA;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonELIMINAR;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button buttonREGISTRAR;
     }
 }

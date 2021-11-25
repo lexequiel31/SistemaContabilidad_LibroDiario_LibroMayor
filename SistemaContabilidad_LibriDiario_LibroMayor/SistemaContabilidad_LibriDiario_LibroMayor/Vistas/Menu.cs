@@ -21,5 +21,29 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
         {
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LibroDiariocs ventanaLibroDiario = new LibroDiariocs();
+
+            ventanaLibroDiario.ShowDialog(); //
+        }
+
+        private void buttonLIBROMAYOR_Click(object sender, EventArgs e)
+        {
+            LibroMayor ventanaLibroMayor = new LibroMayor();
+
+            ventanaLibroMayor.ShowDialog(); //
+        }
+
+        private void buttonSALIR_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
