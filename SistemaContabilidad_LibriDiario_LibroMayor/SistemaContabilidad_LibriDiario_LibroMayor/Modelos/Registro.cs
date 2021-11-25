@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SistemaContabilidad_LibriDiario_LibroMayor
 {
-    class Registro
+    partial class Registro
     {
         private string tipo;
         private string cuentaDebe;

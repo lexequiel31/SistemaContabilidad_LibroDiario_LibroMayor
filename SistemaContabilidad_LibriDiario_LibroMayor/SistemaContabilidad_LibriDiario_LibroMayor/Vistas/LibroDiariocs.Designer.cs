@@ -31,21 +31,23 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
         {
             this.buttonSALIR = new System.Windows.Forms.Button();
             this.buttonLIBROMAYOR = new System.Windows.Forms.Button();
-            this.comboBoxCUENTA = new System.Windows.Forms.ComboBox();
+            this.comboBoxCUENTADEBE = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBoxDESCRIPCION = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.textBoxSALDO = new System.Windows.Forms.TextBox();
-            this.comboBoxTIPO = new System.Windows.Forms.ComboBox();
+            this.comboBoxTIPODEBE = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2FECHA = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonELIMINAR = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.buttonLIMPIAR = new System.Windows.Forms.Button();
+            this.comboBoxCUENTAHABER = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.buttonREGISTRAR = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBoxTIPOHABER = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonSALIR
@@ -56,6 +58,7 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
             this.buttonSALIR.TabIndex = 1;
             this.buttonSALIR.Text = "SALIR";
             this.buttonSALIR.UseVisualStyleBackColor = true;
+            this.buttonSALIR.Click += new System.EventHandler(this.buttonSALIR_Click);
             // 
             // buttonLIBROMAYOR
             // 
@@ -65,14 +68,15 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
             this.buttonLIBROMAYOR.TabIndex = 2;
             this.buttonLIBROMAYOR.Text = "LIBRO MAYOR";
             this.buttonLIBROMAYOR.UseVisualStyleBackColor = true;
+            this.buttonLIBROMAYOR.Click += new System.EventHandler(this.buttonLIBROMAYOR_Click);
             // 
-            // comboBoxCUENTA
+            // comboBoxCUENTADEBE
             // 
-            this.comboBoxCUENTA.FormattingEnabled = true;
-            this.comboBoxCUENTA.Location = new System.Drawing.Point(489, 105);
-            this.comboBoxCUENTA.Name = "comboBoxCUENTA";
-            this.comboBoxCUENTA.Size = new System.Drawing.Size(121, 23);
-            this.comboBoxCUENTA.TabIndex = 25;
+            this.comboBoxCUENTADEBE.FormattingEnabled = true;
+            this.comboBoxCUENTADEBE.Location = new System.Drawing.Point(489, 105);
+            this.comboBoxCUENTADEBE.Name = "comboBoxCUENTADEBE";
+            this.comboBoxCUENTADEBE.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxCUENTADEBE.TabIndex = 25;
             // 
             // label6
             // 
@@ -86,27 +90,12 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(625, 287);
+            this.label5.Location = new System.Drawing.Point(636, 157);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(87, 15);
             this.label5.TabIndex = 23;
             this.label5.Text = "DD-MM-AAAA";
-            // 
-            // textBoxDESCRIPCION
-            // 
-            this.textBoxDESCRIPCION.Location = new System.Drawing.Point(489, 236);
-            this.textBoxDESCRIPCION.Name = "textBoxDESCRIPCION";
-            this.textBoxDESCRIPCION.Size = new System.Drawing.Size(121, 23);
-            this.textBoxDESCRIPCION.TabIndex = 22;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(384, 244);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 15);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "DESCRIPCION";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // textBoxSALDO
             // 
@@ -115,13 +104,14 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
             this.textBoxSALDO.Size = new System.Drawing.Size(121, 23);
             this.textBoxSALDO.TabIndex = 20;
             // 
-            // comboBoxTIPO
+            // comboBoxTIPODEBE
             // 
-            this.comboBoxTIPO.FormattingEnabled = true;
-            this.comboBoxTIPO.Location = new System.Drawing.Point(489, 61);
-            this.comboBoxTIPO.Name = "comboBoxTIPO";
-            this.comboBoxTIPO.Size = new System.Drawing.Size(121, 23);
-            this.comboBoxTIPO.TabIndex = 19;
+            this.comboBoxTIPODEBE.FormattingEnabled = true;
+            this.comboBoxTIPODEBE.Location = new System.Drawing.Point(489, 61);
+            this.comboBoxTIPODEBE.Name = "comboBoxTIPODEBE";
+            this.comboBoxTIPODEBE.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxTIPODEBE.TabIndex = 19;
+            this.comboBoxTIPODEBE.SelectedIndexChanged += new System.EventHandler(this.comboBoxTIPO_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -157,22 +147,24 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
             this.label1.TabIndex = 15;
             this.label1.Text = "TIPO";
             // 
-            // buttonELIMINAR
+            // buttonLIMPIAR
             // 
-            this.buttonELIMINAR.Location = new System.Drawing.Point(321, 376);
-            this.buttonELIMINAR.Name = "buttonELIMINAR";
-            this.buttonELIMINAR.Size = new System.Drawing.Size(131, 23);
-            this.buttonELIMINAR.TabIndex = 26;
-            this.buttonELIMINAR.Text = "ELIMINAR REGISTRO";
-            this.buttonELIMINAR.UseVisualStyleBackColor = true;
+            this.buttonLIMPIAR.Location = new System.Drawing.Point(321, 376);
+            this.buttonLIMPIAR.Name = "buttonLIMPIAR";
+            this.buttonLIMPIAR.Size = new System.Drawing.Size(131, 23);
+            this.buttonLIMPIAR.TabIndex = 26;
+            this.buttonLIMPIAR.Text = "LIMPIAR REGISTRO";
+            this.buttonLIMPIAR.UseVisualStyleBackColor = true;
+            this.buttonLIMPIAR.Click += new System.EventHandler(this.buttonLIMPIAR_Click);
             // 
-            // comboBox1
+            // comboBoxCUENTAHABER
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(489, 284);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 28;
+            this.comboBoxCUENTAHABER.FormattingEnabled = true;
+            this.comboBoxCUENTAHABER.Location = new System.Drawing.Point(489, 284);
+            this.comboBoxCUENTAHABER.Name = "comboBoxCUENTAHABER";
+            this.comboBoxCUENTAHABER.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxCUENTAHABER.TabIndex = 28;
+            this.comboBoxCUENTAHABER.SelectedIndexChanged += new System.EventHandler(this.comboBoxCUENTAHABER_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -191,23 +183,52 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
             this.buttonREGISTRAR.TabIndex = 29;
             this.buttonREGISTRAR.Text = "REGISTRAR";
             this.buttonREGISTRAR.UseVisualStyleBackColor = true;
+            this.buttonREGISTRAR.Click += new System.EventHandler(this.buttonREGISTRAR_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(384, 254);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(32, 15);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "TIPO";
+            // 
+            // comboBoxTIPOHABER
+            // 
+            this.comboBoxTIPOHABER.FormattingEnabled = true;
+            this.comboBoxTIPOHABER.Location = new System.Drawing.Point(489, 246);
+            this.comboBoxTIPOHABER.Name = "comboBoxTIPOHABER";
+            this.comboBoxTIPOHABER.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxTIPOHABER.TabIndex = 31;
+            this.comboBoxTIPOHABER.SelectedIndexChanged += new System.EventHandler(this.comboBoxTIPOHABER_SelectedIndexChanged);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(46, 61);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 32;
             // 
             // LibroDiariocs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(735, 450);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.comboBoxTIPOHABER);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.buttonREGISTRAR);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxCUENTAHABER);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.buttonELIMINAR);
-            this.Controls.Add(this.comboBoxCUENTA);
+            this.Controls.Add(this.buttonLIMPIAR);
+            this.Controls.Add(this.comboBoxCUENTADEBE);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBoxDESCRIPCION);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.textBoxSALDO);
-            this.Controls.Add(this.comboBoxTIPO);
+            this.Controls.Add(this.comboBoxTIPODEBE);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox2FECHA);
@@ -216,6 +237,8 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
             this.Controls.Add(this.buttonSALIR);
             this.Name = "LibroDiariocs";
             this.Text = "LIBRO DIARIO";
+            this.Load += new System.EventHandler(this.LibroDiariocs_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,20 +247,21 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
         #endregion
         private System.Windows.Forms.Button buttonSALIR;
         private System.Windows.Forms.Button buttonLIBROMAYOR;
-        private System.Windows.Forms.ComboBox comboBoxCUENTA;
+        private System.Windows.Forms.ComboBox comboBoxCUENTADEBE;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBoxDESCRIPCION;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxSALDO;
-        private System.Windows.Forms.ComboBox comboBoxTIPO;
+        private System.Windows.Forms.ComboBox comboBoxTIPODEBE;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2FECHA;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button buttonELIMINAR;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button buttonLIMPIAR;
+        private System.Windows.Forms.ComboBox comboBoxCUENTAHABER;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button buttonREGISTRAR;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBoxTIPOHABER;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
