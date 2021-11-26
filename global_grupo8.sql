@@ -38,17 +38,17 @@ DROP TABLE IF EXISTS `registros`;
 
 CREATE TABLE `registros` (
   `idregistros` int(11) NOT NULL AUTO_INCREMENT,
-  `fecha` varchar(45) DEFAULT NULL,
+  `fecha` date DEFAULT NULL,
   `cuentadebe` varchar(45) DEFAULT NULL,
   `debe` varchar(45) DEFAULT NULL,
   `cuentahaber` varchar(45) DEFAULT NULL,
   `haber` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idregistros`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `registros` */
 
-insert  into `registros`(`idregistros`,`fecha`,`cuentadebe`,`debe`,`cuentahaber`,`haber`) values (1,'21-45-1922','Proveedores','22','Caja','22'),(2,'s2212','Proveedores','221321','Sueldos','221321'),(3,'2321','Caja','2222','Proveedores','2222'),(4,'2321','Caja','111','Resultado_Ejercicio','111'),(5,'2321','CC','111','Resultado_Ejercicio','111');
+insert  into `registros`(`idregistros`,`fecha`,`cuentadebe`,`debe`,`cuentahaber`,`haber`) values (20,'2020-04-03','Credito_Banco','567','Proveedores','567'),(21,'2020-05-03','Credito_Banco','567','Proveedores','567'),(22,'2020-06-03','Credito_Banco','567','Proveedores','567'),(23,'2020-07-03','Credito_Banco','567','Proveedores','567'),(24,'2020-07-03','Credito_Banco','567','Proveedores','567'),(25,'2020-08-03','Proveedores','7258527','Caja','7258527'),(26,'2020-08-03','Proveedores','5647','Sueldos','5647'),(27,'2020-08-01','Proveedores','2345','Caja','2345'),(28,'2020-08-03','Caja','123','Proveedores','123'),(29,'2021-10-31','Sueldos','1234','Caja','1234'),(30,'2021-11-23','Credito_Banco','123','Caja','123'),(31,'2021-03-24','Proveedores','9999','Capital','9999'),(32,'2021-11-26','Instalacion','31312','Credito_Banco','31312');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
