@@ -59,13 +59,23 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
 
         private void buttonREGISTRAR_Click(object sender, EventArgs e)
         {
+
+            String dia = dateTimePicker1.Value.Day.ToString();
+            String mes = dateTimePicker1.Value.Month.ToString();
+            String año = dateTimePicker1.Value.Year.ToString();
+            String fechadb = año + "-" + mes + "-" + dia;
+
+            MessageBox.Show(fechadb);
+
             Registro registro1 = new Registro();
             registro1.CuentaDebe = comboBoxCUENTADEBE.Text;
             registro1.CuentaHaber = comboBoxCUENTAHABER.Text;
-            registro1.Fecha = dateTimePicker1.Value.ToShortDateString();
+            registro1.Fecha = fechadb;
             registro1.SaldoDebe = textBoxSALDO.Text;
             registro1.SaldoHaber = textBoxSALDO.Text;
             registro1.Tipo = comboBoxTIPODEBE.Text;
+
+            MessageBox.Show(registro1.Fecha);
 
             listaRegistros.Add(registro1);
 

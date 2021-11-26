@@ -82,11 +82,11 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor.Dao
 
             return lista;
         }
-        public List<Registro> obtenerListaporFecha(String cuenta,String fecha1, String fecha2)
+        public List<Registro> obtenerListaporFecha(String cuenta,String fechaDesde, String fechaHasta)
         {
             List<Registro> lista = new List<Registro>();
             //Realizamos la consulta  a la BD
-            String consulta2 = "SELECT * FROM registros WHERE cuentadebe = '" + cuenta + "' OR cuentahaber = '" + cuenta + "' AND fecha BETWEEN '" + fecha1 + "' AND '" + fecha2 + "'";
+            String consulta2 = "SELECT * FROM registros WHERE fecha BETWEEN '" + fechaDesde + "' AND '" + fechaHasta + "' AND cuentahaber = '" + cuenta + "' OR cuentadebe = '" + cuenta + "';";
             MySqlCommand comando2 = new MySqlCommand(consulta2);
             comando2.Connection = Conectar();
             MySqlDataReader lectura2 = comando2.ExecuteReader();

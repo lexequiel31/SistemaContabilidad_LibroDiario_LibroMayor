@@ -1,9 +1,3 @@
 is_global = true
-build_property.ApplicationManifest = 
-build_property.StartupObject = 
-build_property.ApplicationDefaultFont = 
-build_property.ApplicationHighDpiMode = 
-build_property.ApplicationUseCompatibleTextRendering = 
-build_property.ApplicationVisualStyles = 
 build_property.RootNamespace = SistemaContabilidad_LibriDiario_LibroMayor
-build_property.ProjectDir = C:\Users\fran-\SistemaContabilidad_LibroDiario_LibroMayor\SistemaContabilidad_LibriDiario_LibroMayor\SistemaContabilidad_LibriDiario_LibroMayor\
+build_property.ProjectDir = C:\Users\lexequiel31\Documents\GitHub\SistemaContabilidad_LibroDiario_LibroMayor\SistemaContabilidad_LibriDiario_LibroMayor\SistemaContabilidad_LibriDiario_LibroMayor\

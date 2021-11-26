@@ -29,8 +29,60 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
 
         private void comboBoxCUENTA_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
+            String mesDesde = null;
+            if (dateTimePickerDESDE.Value.Month < 10)
+            {
+                mesDesde = "0" + dateTimePickerDESDE.Value.Month.ToString();
+            }
+            else
+            {
+                mesDesde = dateTimePickerDESDE.Value.Month.ToString();
+            }
 
-            cargarTabla(comboBoxCUENTA.Text);
+            String diaDesde = null;
+            if (dateTimePickerDESDE.Value.Day < 10)
+            {
+                diaDesde = "0" + dateTimePickerDESDE.Value.Day.ToString();
+            }
+            else
+            {
+                diaDesde = dateTimePickerDESDE.Value.Day.ToString();
+            }
+
+            String añoDesde = dateTimePickerDESDE.Value.Year.ToString();
+
+            String fechaDesde = añoDesde + mesDesde  + diaDesde;
+
+            MessageBox.Show(fechaDesde);
+
+            //FECHA HASTA
+
+            String mesHasta = null;
+            if (dateTimePickerHASTA.Value.Month < 10)
+            {
+                mesHasta = "0" + dateTimePickerHASTA.Value.Month.ToString();
+            }
+            else
+            {
+                mesHasta = dateTimePickerHASTA.Value.Month.ToString();
+            }
+
+            String diaHasta = null;
+            if (dateTimePickerHASTA.Value.Day < 10)
+            {
+                diaHasta = "0" + dateTimePickerHASTA.Value.Day.ToString();
+            }
+            else
+            {
+                diaHasta = dateTimePickerHASTA.Value.Day.ToString();
+            }
+            String añoHasta = dateTimePickerHASTA.Value.Year.ToString();
+            String fechaHasta = añoHasta + mesHasta + diaHasta;
+
+            MessageBox.Show(fechaHasta);
+
+            cargarTabla(comboBoxCUENTA.Text, fechaDesde, fechaHasta);
             
         }
 
@@ -50,13 +102,13 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
 
         }
 
-        public void cargarTabla(String cuenta)
+        public void cargarTabla(String cuenta, String fechaDesde, String fechaHasta)
         {
             List<Registro> listaLibroMayor = new List<Registro>();
 
             Dao.RegistroDao listadb = new Dao.RegistroDao();
 
-            listaLibroMayor = listadb.obtenerListaporFecha(cuenta, dateTimePicker1.ToString(), dateTimePicker2.ToString());
+            listaLibroMayor = listadb.obtenerListaporFecha(cuenta, fechaDesde, fechaHasta);
             dataGridView1.AutoGenerateColumns = true;
             dataGridView1.DataSource = listaLibroMayor;
 
