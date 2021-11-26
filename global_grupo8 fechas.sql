@@ -1,0 +1,1 @@
+SELECT * FROM registros WHERE cuentadebe = 'Proveedores' OR cuentahaber = 'Proveedores' AND fecha BETWEEN '26/11/2021' AND '27/11/2021'

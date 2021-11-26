@@ -62,7 +62,7 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
             Registro registro1 = new Registro();
             registro1.CuentaDebe = comboBoxCUENTADEBE.Text;
             registro1.CuentaHaber = comboBoxCUENTAHABER.Text;
-            registro1.Fecha = textBox2FECHA.Text;
+            registro1.Fecha = dateTimePicker1.Value.ToShortDateString();
             registro1.SaldoDebe = textBoxSALDO.Text;
             registro1.SaldoHaber = textBoxSALDO.Text;
             registro1.Tipo = comboBoxTIPODEBE.Text;
@@ -101,7 +101,7 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
         {
             comboBoxCUENTADEBE.Text = null;
             comboBoxCUENTAHABER.Text = null;
-            textBox2FECHA.Text = null;
+            dateTimePicker1.Text = null;
             textBoxSALDO.Text = null;
             textBoxSALDO.Text = null;
             comboBoxTIPODEBE.Text = null;

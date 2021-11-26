@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using MySql;
 
 namespace SistemaContabilidad_LibriDiario_LibroMayor
 {
@@ -55,8 +56,7 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
 
             Dao.RegistroDao listadb = new Dao.RegistroDao();
 
-            listaLibroMayor = listadb.obtenerListaporCuenta(cuenta);
-
+            listaLibroMayor = listadb.obtenerListaporFecha(cuenta, dateTimePicker1.ToString(), dateTimePicker2.ToString());
             dataGridView1.AutoGenerateColumns = true;
             dataGridView1.DataSource = listaLibroMayor;
 
@@ -107,5 +107,22 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
         {
             Application.Exit();
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

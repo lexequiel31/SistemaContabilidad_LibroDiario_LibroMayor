@@ -42,6 +42,10 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
             this.textBoxTOTALDEBE = new System.Windows.Forms.TextBox();
             this.textBoxTOTALHABER = new System.Windows.Forms.TextBox();
             this.textBoxSALDO = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -159,11 +163,47 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
             this.textBoxSALDO.Size = new System.Drawing.Size(100, 23);
             this.textBoxSALDO.TabIndex = 27;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(399, 40);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(228, 23);
+            this.dateTimePicker1.TabIndex = 28;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(399, 85);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(229, 23);
+            this.dateTimePicker2.TabIndex = 29;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(328, 45);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(39, 15);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "Desde";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(328, 90);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(37, 15);
+            this.label7.TabIndex = 31;
+            this.label7.Text = "Hasta";
+            // 
             // LibroMayor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(640, 562);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textBoxSALDO);
             this.Controls.Add(this.textBoxTOTALHABER);
             this.Controls.Add(this.textBoxTOTALDEBE);
@@ -201,5 +241,9 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
         private System.Windows.Forms.TextBox textBoxTOTALDEBE;
         private System.Windows.Forms.TextBox textBoxTOTALHABER;
         private System.Windows.Forms.TextBox textBoxSALDO;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
     }
 }

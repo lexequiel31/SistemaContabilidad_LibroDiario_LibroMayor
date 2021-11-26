@@ -33,12 +33,10 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
             this.buttonLIBROMAYOR = new System.Windows.Forms.Button();
             this.comboBoxCUENTADEBE = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.textBoxSALDO = new System.Windows.Forms.TextBox();
             this.comboBoxTIPODEBE = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2FECHA = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonLIMPIAR = new System.Windows.Forms.Button();
             this.comboBoxCUENTAHABER = new System.Windows.Forms.ComboBox();
@@ -47,6 +45,7 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
             this.label4 = new System.Windows.Forms.Label();
             this.comboBoxTIPOHABER = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,16 +86,6 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
             this.label6.TabIndex = 24;
             this.label6.Text = "CUENTA(DEBE)";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(636, 157);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 15);
-            this.label5.TabIndex = 23;
-            this.label5.Text = "DD-MM-AAAA";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
             // textBoxSALDO
             // 
             this.textBoxSALDO.Location = new System.Drawing.Point(489, 195);
@@ -130,13 +119,6 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
             this.label2.Size = new System.Drawing.Size(44, 15);
             this.label2.TabIndex = 17;
             this.label2.Text = "FECHA";
-            // 
-            // textBox2FECHA
-            // 
-            this.textBox2FECHA.Location = new System.Drawing.Point(489, 149);
-            this.textBox2FECHA.Name = "textBox2FECHA";
-            this.textBox2FECHA.Size = new System.Drawing.Size(121, 23);
-            this.textBox2FECHA.TabIndex = 16;
             // 
             // label1
             // 
@@ -212,11 +194,19 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 32;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(489, 151);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(234, 23);
+            this.dateTimePicker1.TabIndex = 33;
+            // 
             // LibroDiariocs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(735, 450);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.comboBoxTIPOHABER);
             this.Controls.Add(this.label4);
@@ -226,12 +216,10 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
             this.Controls.Add(this.buttonLIMPIAR);
             this.Controls.Add(this.comboBoxCUENTADEBE);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.textBoxSALDO);
             this.Controls.Add(this.comboBoxTIPODEBE);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2FECHA);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonLIBROMAYOR);
             this.Controls.Add(this.buttonSALIR);
@@ -249,12 +237,10 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
         private System.Windows.Forms.Button buttonLIBROMAYOR;
         private System.Windows.Forms.ComboBox comboBoxCUENTADEBE;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxSALDO;
         private System.Windows.Forms.ComboBox comboBoxTIPODEBE;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2FECHA;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonLIMPIAR;
         private System.Windows.Forms.ComboBox comboBoxCUENTAHABER;
@@ -263,5 +249,6 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBoxTIPOHABER;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

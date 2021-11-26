@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 using MySql.Data.MySqlClient;
+using System.Globalization;
+using System.Threading;
 
 
 namespace SistemaContabilidad_LibriDiario_LibroMayor.Dao
-{
+{ 
     class RegistroDao
     {
         public MySqlConnection Conectar()
@@ -45,6 +47,74 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor.Dao
             List<Registro> lista = new List<Registro>();
             //Realizamos la consulta  a la BD
             String consulta = "SELECT * FROM registros WHERE cuentadebe = '" + tipoCuenta + "' OR cuentahaber = '" + tipoCuenta+"';";
+            String consulta2 = "SELECT * FROM registros WHERE fecha BETWEEN @date1 AND @date2;";
+            MySqlCommand comando = new MySqlCommand(consulta);
+            MySqlCommand comando2 = new MySqlCommand(consulta2);
+            comando.Connection = Conectar();
+            MySqlDataReader lectura = comando.ExecuteReader();
+            MySqlDataReader lectura2 = comando2.ExecuteReader();
+
+            while (lectura.Read())
+            {
+                Registro registro2 = new Registro();
+                registro2.id = lectura.GetString(0);
+                registro2.Fecha = lectura.GetDateTime(1).ToShortDateString();
+                registro2.CuentaDebe = lectura.GetString(2);
+                registro2.SaldoDebe = lectura.GetString(3);
+                registro2.CuentaHaber = lectura.GetString(4);
+                registro2.SaldoHaber = lectura.GetString(5);
+                lista.Add(registro2);
+            }
+            while (lectura2.Read())
+            {
+                Registro registro2 = new Registro();
+                registro2.id = lectura.GetString(0);
+                registro2.Fecha = lectura.GetDateTime(1).ToShortDateString();
+                registro2.CuentaDebe = lectura.GetString(2);
+                registro2.SaldoDebe = lectura.GetString(3);
+                registro2.CuentaHaber = lectura.GetString(4);
+                registro2.SaldoHaber = lectura.GetString(5);
+
+                lista.Add(registro2);
+            }
+
+            comando.Connection.Close();
+
+            return lista;
+        }
+        public List<Registro> obtenerListaporFecha(String cuenta,String fecha1, String fecha2)
+        {
+            List<Registro> lista = new List<Registro>();
+            //Realizamos la consulta  a la BD
+            String consulta2 = "SELECT * FROM registros WHERE cuentadebe = '" + cuenta + "' OR cuentahaber = '" + cuenta + "' AND fecha BETWEEN '" + fecha1 + "' AND '" + fecha2 + "'";
+            MySqlCommand comando2 = new MySqlCommand(consulta2);
+            comando2.Connection = Conectar();
+            MySqlDataReader lectura2 = comando2.ExecuteReader();
+
+            while (lectura2.Read())
+            {
+                Registro registro2 = new Registro();
+                registro2.id = lectura2.GetString(0);
+                registro2.Fecha = lectura2.GetString(1);
+                registro2.CuentaDebe = lectura2.GetString(2);
+                registro2.SaldoDebe = lectura2.GetString(3);
+                registro2.CuentaHaber = lectura2.GetString(4);
+                registro2.SaldoHaber = lectura2.GetString(5);
+                lista.Add(registro2);
+            }
+ 
+            
+
+            comando2.Connection.Close();
+
+            return lista;
+        }
+
+        public List<Registro> obtenerListaporFecha(DateTime valor1, DateTime valor2)
+        {
+            List<Registro> lista = new List<Registro>();
+            //Realizamos la consulta  a la BD
+            String consulta = "SELECT * FROM registros where DateTime between @date1 AND @date2"; 
             MySqlCommand comando = new MySqlCommand(consulta);
             comando.Connection = Conectar();
             MySqlDataReader lectura = comando.ExecuteReader();
@@ -53,7 +123,6 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor.Dao
             {
                 Registro registro2 = new Registro();
                 registro2.id = lectura.GetString(0);
-                registro2.Fecha = lectura.GetString(1);
                 registro2.CuentaDebe = lectura.GetString(2);
                 registro2.SaldoDebe = lectura.GetString(3);
                 registro2.CuentaHaber = lectura.GetString(4);
@@ -67,6 +136,7 @@ namespace SistemaContabilidad_LibriDiario_LibroMayor.Dao
             return lista;
         }
 
-        
+
     }
 }
+
